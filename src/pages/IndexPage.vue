@@ -8,10 +8,16 @@
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
+import {defineComponent, onMounted} from 'vue'
 
-export default defineComponent({
-  name: 'IndexPage'
+onMounted(() => {
+  main()
 })
+async function main() {
+// Fetch network info
+  window.martian.connect();
+  // const network = await window.martian.network();
+  // console.log(network);
+}
 </script>

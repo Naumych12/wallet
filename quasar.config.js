@@ -10,7 +10,7 @@
 
 
 const ESLintPlugin = require('eslint-webpack-plugin')
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+// const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 const { configure } = require('quasar/wrappers');
 
@@ -49,21 +49,21 @@ module.exports = configure(function (ctx) {
       'material-icons', // optional, you are not bound to it
     ],
 
-    transpileDependencies: true,
+    // transpileDependencies: true,
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-build
     build: {
       vueRouterMode: 'history', // available values: 'hash', 'history'
       devtool: 'source-map',
 
-      configureWebpack: {
-        plugins: [new NodePolyfillPlugin()],
-        optimization: {
-          splitChunks: {
-            chunks: "all",
-          },
-        },
-      },
+      // configureWebpack: {
+      //   plugins: [new NodePolyfillPlugin()],
+      //   optimization: {
+      //     splitChunks: {
+      //       chunks: "all",
+      //     },
+      //   },
+      // },
 
       // transpile: false,
       // publicPath: '/',
