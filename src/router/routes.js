@@ -1,10 +1,11 @@
+import StatusContainer from "pages/StatusContainer.vue";
 
 const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      { path: '', component: () => import('pages/StatusContainer.vue') }
     ]
   },
 
